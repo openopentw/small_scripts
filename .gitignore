@@ -1,3 +1,9 @@
+# Python Google Package
+.google-cookie
+
+# VIM tmp file
+.*.un~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,10 +1,10 @@
 '''
-@author: openopentw(YJC)
-@description: download & parse the lyrics on the mojim webpage
-@output: 2 files
+author: openopentw(YJC)
+description: download & parse the lyrics on the mojim webpage
+output: 2 files
     - {plain_lyric}.txt
     - {dynamic_lyric}.lrc
-@usage:
+usage:
     for e.g.
     $> python interface.py 七里香
     $> python interface.py 七里香 -a 周杰倫

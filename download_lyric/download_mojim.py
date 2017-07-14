@@ -1,7 +1,7 @@
 '''
-@author: openopentw(YJC)
-@description: to download & parse the lyrics on the mojim webpage & return the parsed lyrics
-@usage:
+author: openopentw(YJC)
+description: to download & parse the lyrics on the mojim webpage & return the parsed lyrics
+usage:
     1. import the file
     2. use the function "main_get_lyric()" to get lyric
 '''

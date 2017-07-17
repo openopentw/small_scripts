@@ -17,4 +17,6 @@ for query in queries:
     ret = get_bus.search_time_bus_stop(query[0], is_go, query[2])
     break
 
+# print('yjc is so handsome.')
+# print( json.dumps([123, 12]) )
 print( json.dumps(ret) )

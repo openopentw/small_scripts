@@ -15,8 +15,8 @@ import re
 # google for "{artist} {song} 歌詞 site:mojim.com"
 def google_lyric(artist, song, DEBUG=False):
     '''
-    @DEBUG: print log messages or not
-    @return: urls which might contains the lyrics
+    DEBUG: print log messages or not
+    return: urls which might contains the lyrics
     '''
     # make query words
     query = ' '.join([artist, song, '歌詞', 'site:mojim.com'])
@@ -31,8 +31,8 @@ def google_lyric(artist, song, DEBUG=False):
 # download HTML CODE from url & PARSE TREE
 def get_html_tree(url, DEBUG=False):
     '''
-    @DEBUG: print log messages or not
-    @return: a file tree which is parsed from url given
+    DEBUG: print log messages or not
+    return: a file tree which is parsed from url given
     '''
     if DEBUG == True:
         print('getting data from: {}'.format(url))
@@ -45,9 +45,9 @@ def get_html_tree(url, DEBUG=False):
 # parse artist & song & lyrics from html tree
 def parse_artist_song_lyric(tree, DEBUG=False):
     '''
-    @DEBUG: print log messages or not
-    @return: a file tree which is parsed from url given
-    @return: artist, song, plain_lyric, dynamic_lyric
+    DEBUG: print log messages or not
+    return: a file tree which is parsed from url given
+    return: artist, song, plain_lyric, dynamic_lyric
             and if DEBUG is specified, it will return the whole lyric additionally
     '''
     # artist
@@ -83,8 +83,8 @@ def parse_artist_song_lyric(tree, DEBUG=False):
 # the main function
 def main_get_lyric(artist, song, DEBUG=False):
     '''
-    @DEBUG: print log messages or not
-    @return: artist, song, plain_lyric, dynamic_lyric
+    DEBUG: print log messages or not
+    return: artist, song, plain_lyric, dynamic_lyric
             and if DEBUG is specified, it will return the whole lyric additionally
             if dynamic_lyric is not supported, than the return dynamic_lyric will be a blank string
 

@@ -1,0 +1,348 @@
+/*
+ * This file should be put at:
+ *   %APPDATA%\Typora\themes\
+ *
+ * My modifies:
+ * - change default fonts to 'Noto Sans CJK TC' & 'consolas' (code), and increase font size
+ * - Let the first <h1> be centered and the first <p> just after <h1> be centered.
+ * - Make background color be more darker
+ */
+
+@charset "UTF-8";
+/* CSS Document */
+
+@import "night/codeblock.dark.css";
+@import "night/sourcemode.dark.css";
+
+@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+:root {
+  --text-color: rgb(192, 192, 192);
+  --bg-color: rgb(44, 44, 44);
+  --code-block-bg-color: #4d4d4d;
+  --side-bar-bg-color: #4d4d4d;
+  --window-border: none;
+
+  --active-file-bg-color: #666;
+  --active-file-text-color: #fff;
+  --item-hover-text-color: #fff;
+  --control-text-color: #d5d5d5;
+}
+
+@media print {
+  /* :root { */
+  /*   --bg-color: white; */
+  /* } */
+  /* html { */
+  /*     font-size: 13px; */
+  /* } */
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+  pre {
+    word-wrap: break-word;
+  }
+  #write {
+    border-radius: 3px;
+    padding: 30px;
+    padding-bottom: 60px;
+  }
+}
+
+html {
+  font-family: "Noto Sans CJK TC Regular", "微軟正黑體","Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  background-color: #666;
+  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.md-toc-inner:before {
+  content: "- ";
+}
+
+.md-image>.md-meta {
+  color: #0c0759;
+  font-size: 0.9rem;
+}
+
+pre,
+pre.md-meta-block {
+  background-color:  #4d4d4d;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+pre.md-meta-block {
+  color: #bdbdbd;
+}
+
+#write {
+	line-height: 1.5;
+  margin: 0 auto;
+  max-width: 860px;
+	padding-left: 60px;
+  padding-right: 60px;
+  background-color: rgb(34, 34, 34);
+}
+
+h1 {
+  font-size: 2.4rem;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h3 {
+  font-size:1.4rem
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans CJK TC Medium", "微軟正黑體","Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+}
+
+h1, h2 {
+  color: rgb(226, 226, 226);
+}
+
+h3 {
+	/* text-transform: uppercase; */
+}
+
+h5, h6 {
+	/* font-weight: bold; */
+}
+
+#write > h1:first-child {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: "Noto Sans CJK TC Medium", "微軟正黑體","Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+  line-height: 2rem;
+}
+
+#write > h1:first-child + p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  padding-bottom: 1.3rem;
+}
+
+a {
+	color: #fff;
+}
+
+[md-inline] a {
+	background-color: #4d4d4d;
+	color: #fff;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+code {
+  /* color: #d8edff; */
+  font-size: 0.9rem;
+}
+
+td {
+	border: 1px solid #666;
+	background-color: #858585;
+	padding-left: 8px;
+}
+
+th {
+	color: #B3B3B3;
+	font-weight: 400;
+	text-align: center;
+}
+
+.md-fences .CodeMirror.CodeMirror-wrap {
+  top: -0.8em;
+  margin-bottom: 0;
+ }
+
+.file-list-item-summary {
+	height: 36px;
+  margin-top: 8px;
+}
+
+.file-list-item {
+	padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#write {
+	cursor: -webkit-image-set(url("ash/cursor.png") 1x, url("ash/cursor@2x.png") 2x) 0 0, auto;
+}
+
+/*blockquote {
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  position: relative;
+  background: var(--code-block-bg-color);
+}
+blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  position: absolute;
+  top: 30px;
+  float: left;
+}*/
+
+blockquote {
+  border-left: 5px solid rgb(52, 52, 52);
+  text-align: left;
+  color: rgb(181, 181, 181);
+  padding: 0.5em 10px;
+  margin: 1.5em 10px;
+  position: relative;
+  padding-left: 24px;
+}
+
+#write > blockquote:after {
+  content: no-close-quote;
+}
+
+.task-list-item input{
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  -webkit-appearance: initial;
+  top: -2px;
+  left: -18px;
+}
+
+.task-list-item input:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.task-list-item input:before{
+  border: 1px solid #d4d4d4;
+  border-radius: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #666;
+  content: ' ';
+  transition: background-color 200ms ease-in-out;
+  display: block;
+}
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+  background: #d4d4d4;
+  border-width: 2px;
+  display:inline-block;
+  transition: background-color 200ms ease-in-out;
+}
+
+.task-list-item input:checked:after,
+.task-list-item input[checked]:after {
+  opacity: 1;
+}
+
+.task-list-item input:after {
+  opacity: 1;
+  -webkit-transition: opacity 0.05s ease-in-out;
+  -moz-transition: opacity 0.05s ease-in-out;
+  transition: opacity 0.05s ease-in-out;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0.325rem;
+  left: 0.28125rem;
+  width: 0.6375rem;
+  height: 0.4rem;
+  border: 3px solid #666;
+  border-top: 0;
+  border-right: 0;
+  content: ' ';
+  opacity: 0;
+}
+
+.task-list-done {
+  text-decoration: line-through;
+  color: #d4d4d4;
+}
+
+.footnote-line {
+  color: #dddddd;
+}
+
+.md-footnote .md-meta {
+   color: #6886ba;
+}
+
+.md-content {
+  color: #d9cbbe;
+}
+
+.megamenu-content {
+  background: #666;
+}
+
+.megamenu-menu{
+  background-color: var(--side-bar-bg-color);
+}
+
+.megamenu-menu-header {
+  border-bottom: 0;
+}
+
+.megamenu-opened header {
+  background: transparent;
+  background: #666;
+}
+
+#m-import-local:hover .preference-item-hint {
+  color: var(--item-hover-text-color);
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+  color: var(--item-hover-text-color);
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+  color: var(--text-color);
+}
+
+#recent-file-panel {
+  color: var(--blur-text-color);
+}
+
+.md-fences,
+code,
+tt {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  font-family: Consolas, "微軟正黑體", "Liberation Mono", Courier, monospace;
+  /* font-size: 0.9em; */
+}
+
+.md-fences,
+tt {
+  padding: 3px;
+  background-color: #141414;
+}
+
+code {
+  background-color: rgb(44, 44, 44);
+}
